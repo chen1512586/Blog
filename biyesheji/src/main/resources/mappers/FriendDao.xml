@@ -1,0 +1,178 @@
+<<<<<<< HEAD
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cpf.demo.dao.FriendDao">
+    <select id="findList" resultType="com.cpf.demo.model.Friend">
+        select
+        id,
+        link_name linkName,
+        link_avatar linkAvatar,
+        link_address linkAddress,
+        link_intro linkIntro,
+        create_time createTime,
+        flag
+        from friendlink
+        <where>
+            and flag!='1'
+            <if test="id!=null and id!=''">
+                and id=#{id}
+            </if>
+            <if test="linkName!=null and linkName!=''">
+                and link_name like '%${linkName}%'
+            </if>
+        </where>
+    </select>
+
+    <update id="delete">
+        update friendlink set flag='1' where id=#{id}
+    </update>
+
+    <update id="update">
+        update friendlink set
+            link_name=#{linkName},
+            link_avatar=#{linkAvatar},
+            link_address=#{linkAddress},
+            link_intro=#{linkIntro},
+            create_time=#{createTime},
+            flag='0'
+        where id=#{id}
+    </update>
+
+    <insert id="insert">
+        insert into friendlink(
+            link_name,
+            link_avatar,
+            link_address,
+            link_intro,
+            create_time,
+            flag
+        ) values (
+            #{linkName},
+            #{linkAvatar},
+            #{linkAddress},
+            #{linkIntro},
+            #{createTime},
+            '0'
+        )
+    </insert>
+=======
+<<<<<<< HEAD
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cpf.demo.dao.FriendDao">
+    <select id="findList" resultType="com.cpf.demo.model.Friend">
+        select
+        id,
+        link_name linkName,
+        link_avatar linkAvatar,
+        link_address linkAddress,
+        link_intro linkIntro,
+        create_time createTime,
+        flag
+        from friendlink
+        <where>
+            and flag!='1'
+            <if test="id!=null and id!=''">
+                and id=#{id}
+            </if>
+            <if test="linkName!=null and linkName!=''">
+                and link_name like '%${linkName}%'
+            </if>
+        </where>
+    </select>
+
+    <update id="delete">
+        update friendlink set flag='1' where id=#{id}
+    </update>
+
+    <update id="update">
+        update friendlink set
+            link_name=#{linkName},
+            link_avatar=#{linkAvatar},
+            link_address=#{linkAddress},
+            link_intro=#{linkIntro},
+            create_time=#{createTime},
+            flag='0'
+        where id=#{id}
+    </update>
+
+    <insert id="insert">
+        insert into friendlink(
+            link_name,
+            link_avatar,
+            link_address,
+            link_intro,
+            create_time,
+            flag
+        ) values (
+            #{linkName},
+            #{linkAvatar},
+            #{linkAddress},
+            #{linkIntro},
+            #{createTime},
+            '0'
+        )
+    </insert>
+=======
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cpf.demo.dao.FriendDao">
+    <select id="findList" resultType="com.cpf.demo.model.Friend">
+        select
+        id,
+        link_name linkName,
+        link_avatar linkAvatar,
+        link_address linkAddress,
+        link_intro linkIntro,
+        create_time createTime,
+        flag
+        from friendlink
+        <where>
+            and flag!='1'
+            <if test="id!=null and id!=''">
+                and id=#{id}
+            </if>
+            <if test="linkName!=null and linkName!=''">
+                and link_name like '%${linkName}%'
+            </if>
+        </where>
+    </select>
+
+    <update id="delete">
+        update friendlink set flag='1' where id=#{id}
+    </update>
+
+    <update id="update">
+        update friendlink set
+            link_name=#{linkName},
+            link_avatar=#{linkAvatar},
+            link_address=#{linkAddress},
+            link_intro=#{linkIntro},
+            create_time=#{createTime},
+            flag='0'
+        where id=#{id}
+    </update>
+
+    <insert id="insert">
+        insert into friendlink(
+            link_name,
+            link_avatar,
+            link_address,
+            link_intro,
+            create_time,
+            flag
+        ) values (
+            #{linkName},
+            #{linkAvatar},
+            #{linkAddress},
+            #{linkIntro},
+            #{createTime},
+            '0'
+        )
+    </insert>
+>>>>>>> 6904d88... first commit
+>>>>>>> 7e2b114... first commit
+</mapper>

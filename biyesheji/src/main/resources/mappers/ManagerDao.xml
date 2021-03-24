@@ -1,0 +1,76 @@
+<<<<<<< HEAD
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cpf.demo.dao.ManagerDao">
+
+    <select id="find" resultType="com.cpf.demo.model.Manager">
+        select
+            man_account manAccount,
+            man_pwd manPwd,
+            flag
+	from manager
+	<where>
+	    and flag!='1'
+        <if test="manAccount!=null and manAccount!=''">
+            and man_account=#{manAccount}
+        </if>
+        <if test="manPwd!=null and manPwd!=''">
+            and man_pwd=#{manPwd}
+        </if>
+    </where>
+    </select>
+
+=======
+<<<<<<< HEAD
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cpf.demo.dao.ManagerDao">
+
+    <select id="find" resultType="com.cpf.demo.model.Manager">
+        select
+            man_account manAccount,
+            man_pwd manPwd,
+            flag
+	from manager
+	<where>
+	    and flag!='1'
+        <if test="manAccount!=null and manAccount!=''">
+            and man_account=#{manAccount}
+        </if>
+        <if test="manPwd!=null and manPwd!=''">
+            and man_pwd=#{manPwd}
+        </if>
+    </where>
+    </select>
+
+=======
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cpf.demo.dao.ManagerDao">
+
+    <select id="find" resultType="com.cpf.demo.model.Manager">
+        select
+            man_account manAccount,
+            man_pwd manPwd,
+            flag
+	from manager
+	<where>
+	    and flag!='1'
+        <if test="manAccount!=null and manAccount!=''">
+            and man_account=#{manAccount}
+        </if>
+        <if test="manPwd!=null and manPwd!=''">
+            and man_pwd=#{manPwd}
+        </if>
+    </where>
+    </select>
+
+>>>>>>> 6904d88... first commit
+>>>>>>> 7e2b114... first commit
+</mapper>

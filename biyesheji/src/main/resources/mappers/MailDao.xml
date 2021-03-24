@@ -1,0 +1,61 @@
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cpf.demo.dao.MailDao">
+    <insert id="insert">
+        insert into email(
+            sender,
+            receiver,
+            subject,
+            text
+        )values(
+            #{sender},
+            #{receiver},
+            #{subject},
+            #{text}
+        )
+    </insert>
+=======
+<<<<<<< HEAD
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cpf.demo.dao.MailDao">
+    <insert id="insert">
+        insert into email(
+            sender,
+            receiver,
+            subject,
+            text
+        )values(
+            #{sender},
+            #{receiver},
+            #{subject},
+            #{text}
+        )
+    </insert>
+=======
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cpf.demo.dao.MailDao">
+    <insert id="insert">
+        insert into email(
+            sender,
+            receiver,
+            subject,
+            text
+        )values(
+            #{sender},
+            #{receiver},
+            #{subject},
+            #{text}
+        )
+    </insert>
+>>>>>>> 6904d88... first commit
+>>>>>>> 7e2b114... first commit
+</mapper>

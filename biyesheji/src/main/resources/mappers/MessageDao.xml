@@ -1,0 +1,121 @@
+<<<<<<< HEAD
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cpf.demo.dao.MessageDao">
+    <insert id="insert">
+        insert into messageboard(
+            author,
+            message,
+            flag
+        ) values (
+            #{author},
+            #{message},
+            '0'
+        )
+    </insert>
+
+    <select id="findList" resultType="com.cpf.demo.model.Message">
+        select
+        id,
+        author,
+        message,
+        messagetime,
+        flag
+        from messageboard
+        <where>
+            and flag!='1'
+            <if test="id!=null and id!=''">
+                and id=#{id}
+            </if>
+            <if test="author!=null and author!=''">
+                and author like '%${author}%'
+            </if>
+        </where>
+    </select>
+
+    <update id="delete">
+        update messageboard set flag='1' where id=#{id}
+    </update>
+=======
+<<<<<<< HEAD
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cpf.demo.dao.MessageDao">
+    <insert id="insert">
+        insert into messageboard(
+            author,
+            message,
+            flag
+        ) values (
+            #{author},
+            #{message},
+            '0'
+        )
+    </insert>
+
+    <select id="findList" resultType="com.cpf.demo.model.Message">
+        select
+        id,
+        author,
+        message,
+        messagetime,
+        flag
+        from messageboard
+        <where>
+            and flag!='1'
+            <if test="id!=null and id!=''">
+                and id=#{id}
+            </if>
+            <if test="author!=null and author!=''">
+                and author like '%${author}%'
+            </if>
+        </where>
+    </select>
+
+    <update id="delete">
+        update messageboard set flag='1' where id=#{id}
+    </update>
+=======
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cpf.demo.dao.MessageDao">
+    <insert id="insert">
+        insert into messageboard(
+            author,
+            message,
+            flag
+        ) values (
+            #{author},
+            #{message},
+            '0'
+        )
+    </insert>
+
+    <select id="findList" resultType="com.cpf.demo.model.Message">
+        select
+        id,
+        author,
+        message,
+        messagetime,
+        flag
+        from messageboard
+        <where>
+            and flag!='1'
+            <if test="id!=null and id!=''">
+                and id=#{id}
+            </if>
+            <if test="author!=null and author!=''">
+                and author like '%${author}%'
+            </if>
+        </where>
+    </select>
+
+    <update id="delete">
+        update messageboard set flag='1' where id=#{id}
+    </update>
+>>>>>>> 6904d88... first commit
+>>>>>>> 7e2b114... first commit
+</mapper>

@@ -1,0 +1,16 @@
+{
+  "id": "2071549",
+  "name": "no name",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "7517986",
+      "name": "鼠标",
+      "font_class": "shubiao",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    }
+  ]
+}

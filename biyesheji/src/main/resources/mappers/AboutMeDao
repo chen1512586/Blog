@@ -1,0 +1,43 @@
+<<<<<<< HEAD
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cpf.demo.dao.AboutMeDao">
+
+    <select id="find">
+        select
+        id,
+        about_content aboutContent
+        from aboutme
+    </select>
+
+=======
+<<<<<<< HEAD
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cpf.demo.dao.AboutMeDao">
+
+    <select id="find">
+        select
+        id,
+        about_content aboutContent
+        from aboutme
+    </select>
+
+=======
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cpf.demo.dao.AboutMeDao">
+
+    <select id="find">
+        select
+        id,
+        about_content aboutContent
+        from aboutme
+    </select>
+
+>>>>>>> 6904d88... first commit
+>>>>>>> 7e2b114... first commit
+</mapper>

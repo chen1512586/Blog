@@ -1,0 +1,142 @@
+<<<<<<< HEAD
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cpf.demo.dao.TagDao">
+    <select id="findList" resultType="com.cpf.demo.model.Tag">
+        select
+        id,
+        tag_name tagName,
+        create_time createTime,
+        flag
+        from tag
+        <where>
+            and flag!='1'
+            <if test="id!=null and id!=''">
+                and id=#{id}
+            </if>
+            <if test="tagName!=null and tagName!=''">
+                and tag_name like '%${tagName}%'
+            </if>
+        </where>
+    </select>
+
+    <update id="delete">
+        update tag set flag='1' where id=#{id}
+    </update>
+
+    <update id="update">
+        update tag set
+            tag_name=#{tagName},
+            create_time=#{createTime},
+            flag='0'
+        where id=#{id}
+    </update>
+
+    <insert id="insert">
+        insert into tag(
+            tag_name,
+            create_time,
+            flag
+        ) values (
+            #{tagName},
+            #{createTime},
+            '0'
+        )
+    </insert>
+=======
+<<<<<<< HEAD
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cpf.demo.dao.TagDao">
+    <select id="findList" resultType="com.cpf.demo.model.Tag">
+        select
+        id,
+        tag_name tagName,
+        create_time createTime,
+        flag
+        from tag
+        <where>
+            and flag!='1'
+            <if test="id!=null and id!=''">
+                and id=#{id}
+            </if>
+            <if test="tagName!=null and tagName!=''">
+                and tag_name like '%${tagName}%'
+            </if>
+        </where>
+    </select>
+
+    <update id="delete">
+        update tag set flag='1' where id=#{id}
+    </update>
+
+    <update id="update">
+        update tag set
+            tag_name=#{tagName},
+            create_time=#{createTime},
+            flag='0'
+        where id=#{id}
+    </update>
+
+    <insert id="insert">
+        insert into tag(
+            tag_name,
+            create_time,
+            flag
+        ) values (
+            #{tagName},
+            #{createTime},
+            '0'
+        )
+    </insert>
+=======
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cpf.demo.dao.TagDao">
+    <select id="findList" resultType="com.cpf.demo.model.Tag">
+        select
+        id,
+        tag_name tagName,
+        create_time createTime,
+        flag
+        from tag
+        <where>
+            and flag!='1'
+            <if test="id!=null and id!=''">
+                and id=#{id}
+            </if>
+            <if test="tagName!=null and tagName!=''">
+                and tag_name like '%${tagName}%'
+            </if>
+        </where>
+    </select>
+
+    <update id="delete">
+        update tag set flag='1' where id=#{id}
+    </update>
+
+    <update id="update">
+        update tag set
+            tag_name=#{tagName},
+            create_time=#{createTime},
+            flag='0'
+        where id=#{id}
+    </update>
+
+    <insert id="insert">
+        insert into tag(
+            tag_name,
+            create_time,
+            flag
+        ) values (
+            #{tagName},
+            #{createTime},
+            '0'
+        )
+    </insert>
+>>>>>>> 6904d88... first commit
+>>>>>>> 7e2b114... first commit
+</mapper>
