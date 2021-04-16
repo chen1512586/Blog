@@ -1,4 +1,4 @@
-#  **基于Vue+Spring boot搭建的博客项目** 
+#  **基于Vue + Spring boot + MyBatis搭建的博客项目** 
 
 #### 介绍
 个人博客
@@ -12,7 +12,7 @@ biyesheji为后端项目
 
 前端： "vue" + "vuex" + "vue-router" + "axios" + "element" + "echarts"
 
-后端： "SpringBoot" +  "Mysql"
+后端： "SpringBoot" +  "Mysql" + "MyBatis"
 
 PS:项目还有诸多不足之处，后续会加以改进。
 
